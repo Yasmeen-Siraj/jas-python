@@ -20,8 +20,6 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "# Load the Web page\n",
-    "\n",
     "chrome_path = r\"C:/Program Files (x86)/chromedriver.exe\"\n",
     "driver = webdriver.Chrome(chrome_path)\n",
     "driver.get(\"http://www.jodidb.org/TableViewer/tableView.aspx?ReportId=93906\")\n",
@@ -34,8 +32,6 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "#Specify the Drop Down Menu\n",
-    "\n",
     "drop_menu = driver.find_element_by_xpath('//*[@id=\"selectMenu2\"]').click()"
    ]
   },
@@ -45,8 +41,6 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "# Specify the Exports option from the menu \n",
-    "\n",
     "ex_obj=driver.find_element_by_xpath('//*[@id=\"a-el-d2-mi3\"]').send_keys(\"Exports\")"
    ]
   },
@@ -56,18 +50,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "# Click Exports\n",
-    "\n",
     "ex_obj2= driver.find_element_by_xpath('//*[@id=\"a-el-d2-mi3\"]').click()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# Extract teh columns headers"
    ]
   },
   {
@@ -118,15 +101,6 @@
    ],
    "source": [
     "headerlist"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "#Extract the rows headers"
    ]
   },
   {
@@ -360,15 +334,6 @@
    ],
    "source": [
     "cell_data"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# Create the dataframe"
    ]
   },
   {
@@ -1642,15 +1607,6 @@
    ],
    "source": [
     "stat.count()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# Convert dataframe to SQL data"
    ]
   },
   {
